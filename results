@@ -1,0 +1,296 @@
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Open Graph info -->
+		<meta property="og:title" content="DevOps Maturity Assessment" />
+		<meta property="og:description" content="This online DevOps Maturity Assessment questionnaire will help you understand your current strengths and weaknesses and then recommend resources that can support you in taking the next steps on your DevOps journey." />
+		<meta property="og:site_name" content="DevOps Maturity Assessment" />
+		<meta property="og:image" content="https://devopsmaturity.atos.net:/og-image.jpg" />
+		<meta property="og:image:width" content="1680" />
+		<meta property="og:image:height" content="870" />
+		
+		<!-- Favicon stuff - check out https://realfavicongenerator.net/ -->
+		<link rel="apple-touch-icon" sizes="180x180" href="https://devopsmaturity.atos.net/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="https://devopsmaturity.atos.net/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="https://devopsmaturity.atos.net/favicon-16x16.png">
+		<link rel="manifest" href="https://devopsmaturity.atos.net/site.webmanifest">
+		<link rel="mask-icon" href="https://devopsmaturity.atos.net/safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#2d89ef">
+		<meta name="theme-color" content="#ffffff">
+		
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://devopsmaturity.atos.net/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://devopsmaturity.atos.net/fontawesome/css/all.css" rel="stylesheet">
+
+		<title>DevOps Maturity Assessment</title>
+		<script src="https://devopsmaturity.atos.net/js/chart.bundle.min.js"></script>
+		<script src="https://devopsmaturity.atos.net/js/jquery-3.3.1.min.js"></script>		
+		<style>
+			#bigwrapper {
+				background-color: RGB(255, 255, 255);
+				padding-top: 70px;
+			}
+		
+			@media (max-width: 355px) { 
+				#bigwrapper { padding-top: 100px; }
+			} 	
+		
+		</style>
+		
+	</head>
+	
+	<body id="bigwrapper">
+
+	<nav class="navbar navbar-dark bg-primary fixed-top navbar-expand-md form-group" ">
+		<a href="https://devopsmaturity.atos.net/about" class="navbar-brand">DevOps Maturity Assessment</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav ml-auto">
+						<li>
+			<a href="results#" class="nav-link" onclick="window.location = 'section-introduction';">Questionaire</a>
+		</li>
+				<li class="navbar-item dropdown">
+			<a href="results#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				Sections			</a>
+			<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+											<a class="dropdown-item" href="results#" onclick="window.location = 'section-introduction';">Introduction</a>
+														<a class="dropdown-item" href="results#" onclick="window.location = 'section-team-agility';">Team Agility</a>
+														<a class="dropdown-item" href="results#" onclick="window.location = 'section-collaboration';">Collaboration</a>
+														<a class="dropdown-item" href="results#" onclick="window.location = 'section-automation';">Automation</a>
+														<a class="dropdown-item" href="results#" onclick="window.location = 'section-architecture-and-design';">Architecture and Design</a>
+														<a class="dropdown-item" href="results#" onclick="window.location = 'section-devops-practices';">DevOps Practices</a>
+														<a class="dropdown-item" href="results#" onclick="window.location = 'section-org-structure-culture-and-incentives';">Org Structure, Culture and Incentives</a>
+														<a class="dropdown-item" href="results#" onclick="window.location = 'section-standardisation';">Standardisation</a>
+										</div>
+		</li>
+				<li>
+			<a href="results#" class="nav-link active" onclick="window.location = 'results';">Results</a>
+		</li>
+				<li class="navbar-item dropdown">
+			<a href="results#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				Detailed Reports			</a>
+			<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+											<a class="dropdown-item" href="results#" onclick="window.location = 'devops-maturity-csv.php';">Download CSV</a>
+														<div class="dropdown-divider"></div>
+														<a class="dropdown-item" href="results#" onclick="window.location = 'results-automation';">Automation</a>
+														<a class="dropdown-item" href="results#" onclick="window.location = 'results-devops-practices';">DevOps Practices</a>
+														<a class="dropdown-item" href="results#" onclick="window.location = 'results-org-structure-culture-and-incentives';">Org Structure, Culture and Incentives</a>
+										</div>
+		</li>
+				<li>
+			<a href="results#" class="nav-link" onclick="window.location = 'resources';">Resources</a>
+		</li>
+				<li>
+			<a href="results#" class="nav-link" onclick="window.location = 'about';">About</a>
+		</li>
+					</ul>
+		</div>
+	</nav>	
+	
+	
+	<div class="container-fluid">
+		
+		<div class="row">
+			<div class="col-xl-9 col-lg-11 pb-0 rounded text-center text-light mx-auto">
+				<div class="rounded-top p-2 ml-sm-2 ml-xs-2 mt-2 mr-sm-2 mr-xs-2 border-primary border-top border-left border-right">
+					<canvas  id="chartOverallResults"></canvas>
+				</div>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-xl-9 col-lg-11  pt-0 pb-4 rounded text-left mx-auto">
+				<div class="bg-light rounded-bottom p-2 p-sm-4 border-primary border ml-sm-2 ml-xs-2 mb-2 mr-sm-2 mr-xs-2">
+						<div class="row">
+							<div class="col-lg-12">
+								<p>The responses to the questionaire show that the 3 areas in which you are strongest are DevOps Practices, Collaboration and Architecture and Design.</p><p>The 3 areas where you have the most potential to improve are listed below, together with links to resources that you may find useful.</p>							</div>
+						</div>
+				
+										
+						<div class="row">
+							<div class="col-lg-12 mt-1">
+								<div class="card-deck">
+									<div class="card border-primary">
+										<h5 class="card-header text-center text-white bg-primary">
+											Automation										</h5>
+										<div class="card-body p-1">
+											<div>
+													
+		<ul class="list-group list-group-flush">
+			<li class="list-group-item"><p>Automation is critical to shortening the lead time for software delivery. If quality and speed are to be transformed, automation is essential. Automation enables environments to be provisioned and configured identically every time. Automation enables application code to be built, tested, delivered, provisioned and configured easily. Automation also enables environments to be monitored and incidents (including security threats) to be responded to based upon a set of rules. Automation drives consistency, enforces quality, removes wastage and delivers speed; it is the technical backbone to any DevOps implementation.</p><p id="Automation"><a href="results#/" onclick="$('#Automation').html('The general rule of thumb is to automate anything that you’re doing more than once, however there are diminishing returns that will be experienced and it produces a new code base to maintain. Surprisingly, adopting a clear and well communicated automation strategy is not necessarily key to successful adoption and buy-in from engineering teams, although it is certainly valuable to have one. The question is more about timing than anything else, but in certain areas (e.g. Infrastructure as Code) automation is one of those things that generally builds pace organically. Start small with engineering led experimentation as, generally, engineers see the value in automation. We suggest that you: <p />- Encourage automation of the day to day (something that may save 20 minutes but is done several times per week, as once the benefits are seen, automating things becomes addictive) <p />- Catalyse discussions of automation tooling choices via communities of interest, these will eventually generate standards in coding, practices, processes and principles <p />- Continuously review automation as part of retrospectives <p />- Communicate automation successes and failures (both can be learned from!) <p />- Follow good engineering practices: for example, maintain automation code in a version controlled code repository <p />When making the case for automation, it is not necessarily about the cost saving (almost certainly not based upon the status quo). For example, the business case for test automation based upon the current release frequency may not make sense, but if that release frequency shifts to once per day it would do. It’s not just about release frequency either, automation significantly reduces wastage within the system, measuring the mean time to recovery (MTTR) and the number of defects in production will display the benefit of automation here. Ultimately the benefits of automation are speed and consistency.');">Show more advice >></a></p><p>See also <a href="https://devopsmaturity.atos.net/results-automation">detailed report for Automation</a>.</p></li>
+							
+				<li class="list-group-item"><span class="fas fa-book-open text-primary"></span>  <a class="card-link" target="_blank" href="https://www.ansible.com/resources/ebooks/get-started-with-red-hat-ansible-tower">Get started with Red Hat Ansible Tower</a></li>
+							
+				<li class="list-group-item"><span class="fas fa-file-alt text-primary"></span>  <a class="card-link" target="_blank" href="https://www.ansible.com/resources/whitepapers">Various Ansible Whitepapers</a></li>
+							
+				<li class="list-group-item"><span class="fab fa-blogger text-primary"></span>  <a class="card-link" target="_blank" href="https://www.linkedin.com/pulse/devops-dont-create-haystack-chris-baynham-hughes/">DevOps: Don't create the haystack by Chris Baynham-Hughes</a></li>
+							
+				<li class="list-group-item"><span class="fab fa-blogger text-primary"></span>  <a class="card-link" target="_blank" href="https://medium.com/runatlantis/putting-the-dev-into-devops-why-your-developers-should-write-terraform-too-d3c079dfc6a8">Putting The Dev Into DevOps: Why Your Developers Should Write Terraform Too by Luke Kysow</a></li>
+							
+				<li class="list-group-item"><span class="fas fa-file-alt text-primary"></span>  <a class="card-link" target="_blank" href="https://atos.net/wp-content/uploads/2018/09/atos-wp-datacenter-automation.pdf">Data Center Automation (Atos Whitepaper)</a></li>
+									
+		</ul>
+	
+												</div>
+										</div>
+										<div class="card-footer text-center text-white bg-primary">
+											Your score: 0%
+										</div>
+									</div>
+									<div class="card border-primary">
+										<h5 class="card-header text-center text-white bg-primary">
+											Org Structure, Culture and Incentives										</h5>
+										<div class="card-body p-1">
+													
+		<ul class="list-group list-group-flush">
+			<li class="list-group-item"><p>Org Structure, Culture and Incentives are critical for DevOps success within an organisation, but they are also the hardest/most disruptive elements to change and get right.</p><p>See also <a href="https://devopsmaturity.atos.net/results-org-structure-culture-and-incentives">detailed report for Org Structure, Culture and Incentives</a>.</p></li>
+							
+				<li class="list-group-item"><span class="fab fa-blogger text-primary"></span>  <a class="card-link" target="_blank" href="https://www.mountaingoatsoftware.com/blog/the-benefits-of-feature-teams">The Benefits of Feature Teams by Mike Cohn</a></li>
+							
+				<li class="list-group-item"><span class="fa fa-video text-primary"></span>  <a class="card-link" target="_blank" href="https://vimeo.com/85490944">Spotify Engineering Culture</a></li>
+							
+				<li class="list-group-item"><span class="fas fa-book-open text-primary"></span>  <a class="card-link" target="_blank" href="https://opensource.com/open-organization/resources/field-guide">The Open Organization Field Guide</a></li>
+							
+				<li class="list-group-item"><span class="fas fa-link text-primary"></span>  <a class="card-link" target="_blank" href="https://management30.com">Management 3.0</a></li>
+							
+				<li class="list-group-item"><span class="fa fa-video text-primary"></span>  <a class="card-link" target="_blank" href="https://www.youtube.com/watch?v=tY4_OTj46h8">DevOpsChat: "Giving a Damn" interview with Pawel Brodzinski (00:34)</a></li>
+									
+		</ul>
+	
+											</div>
+										<div class="card-footer text-center text-white bg-primary">
+											Your score: 0%
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					
+						<div class="row">
+							<div class="col-lg-12 mt-sm-4">
+								<div class="card border-primary">
+									<h5 class="card-header text-center text-white bg-primary">
+										Team Agility									</h5>
+									<div class="card-body p-1">
+												
+		<ul class="list-group list-group-flush">
+			<li class="list-group-item"><p>A great place to start is by reading the Agile Manifesto. Scrum is a popular Agile software development framework which is a great approach when setting up a new team if there isn't already an existing way of working. Kanban is an evolutionary method for improving a team's agility, and works well when the team already has an existing way of working in place.</p></li>
+							
+				<li class="list-group-item"><span class="fas fa-link text-primary"></span>  <a class="card-link" target="_blank" href="http://agilemanifesto.org/">Agile Manifesto</a></li>
+							
+				<li class="list-group-item"><span class="fa fa-video text-primary"></span>  <a class="card-link" target="_blank" href="https://www.youtube.com/watch?v=GE6lbPLEAzc">Explaining Agile - Martin Fowler and Neal Ford at USI (0:43)</a></li>
+							
+				<li class="list-group-item"><span class="fa fa-video text-primary"></span>  <a class="card-link" target="_blank" href="https://vimeo.com/46272041">The Systems Thinking Approach to Introducing Kanban - David Anderson (1:31)</a></li>
+							
+				<li class="list-group-item"><span class="fas fa-book-open text-primary"></span>  <a class="card-link" target="_blank" href="http://www.scrumguides.org/index.html">The Scrum Guide by Ken Schwaber and Jeff Sutherland</a></li>
+							
+				<li class="list-group-item"><span class="fas fa-book-open text-primary"></span>  <span class="fas fa-dollar-sign text-primary"></span>  <a class="card-link" target="_blank" href="https://www.amazon.com/Succeeding-Agile-Software-Development-Using/dp/0321579364">Succeeding with Agile: Software Development Using Scrum by Mike Cohn</a></li>
+							
+				<li class="list-group-item"><span class="fas fa-book-open text-primary"></span>  <span class="fas fa-dollar-sign text-primary"></span>  <a class="card-link" target="_blank" href="https://www.amazon.com/Kanban-Successful-Evolutionary-Technology-Business/dp/0984521402">Kanban: Successful Evolutionary Change for Your Technology Business by David Anderson</a></li>
+									
+		</ul>
+	
+										</div>
+									<div class="card-footer text-center text-white bg-primary">
+										Your score: 0%
+									</div>
+								</div>
+							</div>
+						
+						
+						</div>
+					
+				</div>
+			</div>
+
+			
+		
+		</div>
+		
+	</div>
+	
+<script>
+	
+	Chart.defaults.global.animation.duration = 3000;
+
+	new Chart(document.getElementById("chartOverallResults"), {
+		type: 'radar',
+		data: {
+			labels: ["Org Structure, Culture and Incentives","Team Agility","Automation","Standardisation","Architecture and Design","DevOps Practices","Collaboration"],
+			datasets: [{
+				lineTension: 0.4,
+				label: '',
+				pointStyle: 'circle',
+				pointRadius: 5,
+				data: [0,0,0,0,0,0,0],
+				pointBackgroundColor: '#00314c',
+				backgroundColor: 'rgba(0, 104, 160, 0.2)',
+				borderColor: '#00314c'
+				}]
+		},
+		options: {
+					responsive: true,
+					title: {
+						display: true,
+						text: 'DevOps Maturity by Area',
+						fontSize: 16,
+						fontColor: "black"
+					},
+					tooltips: {
+						custom: function(tooltip) {
+							if (!tooltip) return;
+							// disable displaying the color box;
+							tooltip.displayColors = false;
+						},
+						callbacks: {
+							label: function(tooltipItem, data) {
+								return tooltipItem.yLabel + '%';
+							}
+						}
+					},
+					legend: {
+						display: false
+					},
+					scaleShowLabels: true,
+					scale: {
+						ticks: {
+							display: false,
+							beginAtZero: true,
+							min: 0,
+							max: 100,
+							stepSize: 25,
+							callback: function(value, index, values) {
+								return value + '%';
+							}
+						},
+						pointLabels: {
+							fontSize: 14,
+							fontColor: "black"
+						},
+						gridLines: { color: "#0068a0" },
+						angleLines: { color: "#0068a0" }, 
+					}
+				}
+		}
+	);
+
+</script>
+	
+
+		<!-- Popper.js first, then Bootstrap JS -->
+        <script src="https://devopsmaturity.atos.net/js/popper.min.js"></script>
+        <script src="https://devopsmaturity.atos.net/js/bootstrap.min.js"></script>
+		
+    
+  </body>
+</html>
+    		
+
+	

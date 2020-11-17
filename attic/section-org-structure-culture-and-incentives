@@ -1,0 +1,475 @@
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Open Graph info -->
+		<meta property="og:title" content="DevOps Maturity Assessment" />
+		<meta property="og:description" content="This online DevOps Maturity Assessment questionnaire will help you understand your current strengths and weaknesses and then recommend resources that can support you in taking the next steps on your DevOps journey." />
+		<meta property="og:site_name" content="DevOps Maturity Assessment" />
+		<meta property="og:image" content="https://devopsmaturity.atos.net:/og-image.jpg" />
+		<meta property="og:image:width" content="1680" />
+		<meta property="og:image:height" content="870" />
+		
+		<!-- Favicon stuff - check out https://realfavicongenerator.net/ -->
+		<link rel="apple-touch-icon" sizes="180x180" href="https://devopsmaturity.atos.net/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="https://devopsmaturity.atos.net/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="https://devopsmaturity.atos.net/favicon-16x16.png">
+		<link rel="manifest" href="https://devopsmaturity.atos.net/site.webmanifest">
+		<link rel="mask-icon" href="https://devopsmaturity.atos.net/safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#2d89ef">
+		<meta name="theme-color" content="#ffffff">
+		
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://devopsmaturity.atos.net/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://devopsmaturity.atos.net/fontawesome/css/all.css" rel="stylesheet">
+
+		<title>DevOps Maturity Assessment</title>
+		<script src="https://devopsmaturity.atos.net/js/chart.bundle.min.js"></script>
+		<script src="https://devopsmaturity.atos.net/js/jquery-3.3.1.min.js"></script>		
+		<style>
+			#bigwrapper {
+				background-color: RGB(255, 255, 255);
+				padding-top: 70px;
+			}
+		
+			@media (max-width: 355px) { 
+				#bigwrapper { padding-top: 100px; }
+			} 	
+		
+		</style>
+		
+	</head>
+	
+	<body id="bigwrapper">
+
+	<nav class="navbar navbar-dark bg-primary fixed-top navbar-expand-md form-group" ">
+		<a href="https://devopsmaturity.atos.net/about" class="navbar-brand">DevOps Maturity Assessment</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav ml-auto">
+						<li>
+			<a href="section-org-structure-culture-and-incentives#" class="nav-link active" onclick="$('form').attr('action', 'section-introduction'); $('form').submit();">Questionaire</a>
+		</li>
+				<li class="navbar-item dropdown">
+			<a href="section-org-structure-culture-and-incentives#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				Sections			</a>
+			<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+											<a class="dropdown-item" href="section-org-structure-culture-and-incentives#" onclick="$('form').attr('action', 'section-introduction'); $('form').submit();">Introduction</a>
+														<a class="dropdown-item" href="section-org-structure-culture-and-incentives#" onclick="$('form').attr('action', 'section-team-agility'); $('form').submit();">Team Agility</a>
+														<a class="dropdown-item" href="section-org-structure-culture-and-incentives#" onclick="$('form').attr('action', 'section-collaboration'); $('form').submit();">Collaboration</a>
+														<a class="dropdown-item" href="section-org-structure-culture-and-incentives#" onclick="$('form').attr('action', 'section-automation'); $('form').submit();">Automation</a>
+														<a class="dropdown-item" href="section-org-structure-culture-and-incentives#" onclick="$('form').attr('action', 'section-architecture-and-design'); $('form').submit();">Architecture and Design</a>
+														<a class="dropdown-item" href="section-org-structure-culture-and-incentives#" onclick="$('form').attr('action', 'section-devops-practices'); $('form').submit();">DevOps Practices</a>
+														<a class="dropdown-item" href="section-org-structure-culture-and-incentives#" onclick="$('form').attr('action', 'section-org-structure-culture-and-incentives'); $('form').submit();">Org Structure, Culture and Incentives</a>
+														<a class="dropdown-item" href="section-org-structure-culture-and-incentives#" onclick="$('form').attr('action', 'section-standardisation'); $('form').submit();">Standardisation</a>
+										</div>
+		</li>
+				<li>
+			<a href="section-org-structure-culture-and-incentives#" class="nav-link" onclick="$('form').attr('action', 'results'); $('form').submit();">Results</a>
+		</li>
+				<li class="navbar-item dropdown">
+			<a href="section-org-structure-culture-and-incentives#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				Detailed Reports			</a>
+			<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+											<a class="dropdown-item" href="section-org-structure-culture-and-incentives#" onclick="$('form').attr('action', 'devops-maturity-csv.php'); $('form').submit();">Download CSV</a>
+														<div class="dropdown-divider"></div>
+														<a class="dropdown-item" href="section-org-structure-culture-and-incentives#" onclick="$('form').attr('action', 'results-automation'); $('form').submit();">Automation</a>
+														<a class="dropdown-item" href="section-org-structure-culture-and-incentives#" onclick="$('form').attr('action', 'results-devops-practices'); $('form').submit();">DevOps Practices</a>
+														<a class="dropdown-item" href="section-org-structure-culture-and-incentives#" onclick="$('form').attr('action', 'results-org-structure-culture-and-incentives'); $('form').submit();">Org Structure, Culture and Incentives</a>
+										</div>
+		</li>
+				<li>
+			<a href="section-org-structure-culture-and-incentives#" class="nav-link" onclick="$('form').attr('action', 'resources'); $('form').submit();">Resources</a>
+		</li>
+				<li>
+			<a href="section-org-structure-culture-and-incentives#" class="nav-link" onclick="$('form').attr('action', 'about'); $('form').submit();">About</a>
+		</li>
+					</ul>
+		</div>
+	</nav>	
+	
+ 
+ 
+	<div class="container-fluid">
+	<form action="https://devopsmaturity.atos.net/test.php" method="POST">
+  
+
+	<div class="row">
+		<div class="col-xl-9 col-lg-11 m-2 pb-4 rounded text-center text-dark mx-auto">
+			<h3>Org Structure, Culture and Incentives</h3>
+		
+
+		
+				<div class="card mt-4  ml-sm-2 ml-xs-0 mr-sm-2 mr-xs-0 text-dark text-left bg-light border-primary border">
+										<h6 class="card-header">Is the team a cross functional delivery team comprising of development, testing and operations expertise?</h6>
+										<div class="card-body pt-1 pb-1 bg-gradient-secondary">
+									<div class="custom-control custom-radio my-2">
+			<input type="radio" class="custom-control-input" id="S7-Q1-A1" value="S7-Q1-A1" name="S7-Q1" >
+			<label class="custom-control-label" for="S7-Q1-A1">Yes</label>
+			</div>
+					<div class="custom-control custom-radio my-2">
+			<input type="radio" class="custom-control-input" id="S7-Q1-A2" value="S7-Q1-A2" name="S7-Q1" >
+			<label class="custom-control-label" for="S7-Q1-A2">No</label>
+			</div>
+				
+					</div>
+				</div>
+				
+		
+				
+				<div class="card mt-4  ml-sm-2 ml-xs-0 mr-sm-2 mr-xs-0 text-dark text-left bg-light border-primary border">
+										<h6 class="card-header">Are incentives for people on the team (both financial and non-financial) aligned to overall team results?</h6>
+										<div class="card-body pt-1 pb-1 bg-gradient-secondary">
+									<div class="custom-control custom-radio my-2">
+			<input type="radio" class="custom-control-input" id="S7-Q2-A1" value="S7-Q2-A1" name="S7-Q2" >
+			<label class="custom-control-label" for="S7-Q2-A1">Yes</label>
+			</div>
+					<div class="custom-control custom-radio my-2">
+			<input type="radio" class="custom-control-input" id="S7-Q2-A2" value="S7-Q2-A2" name="S7-Q2" >
+			<label class="custom-control-label" for="S7-Q2-A2">No</label>
+			</div>
+				
+					</div>
+				</div>
+				
+		
+				
+				<div class="card mt-4  ml-sm-2 ml-xs-0 mr-sm-2 mr-xs-0 text-dark text-left bg-light border-primary border">
+										<h6 class="card-header">Are those responsible for designing, developing, testing and operating the application all part of the same team?</h6>
+										<div class="card-body pt-1 pb-1 bg-gradient-secondary">
+									<div class="custom-control custom-radio my-2">
+			<input type="radio" class="custom-control-input" id="S7-Q3-A1" value="S7-Q3-A1" name="S7-Q3" >
+			<label class="custom-control-label" for="S7-Q3-A1">Yes</label>
+			</div>
+					<div class="custom-control custom-radio my-2">
+			<input type="radio" class="custom-control-input" id="S7-Q3-A2" value="S7-Q3-A2" name="S7-Q3" >
+			<label class="custom-control-label" for="S7-Q3-A2">No</label>
+			</div>
+				
+					</div>
+				</div>
+				
+		
+				
+				<div class="card mt-4  ml-sm-2 ml-xs-0 mr-sm-2 mr-xs-0 text-dark text-left bg-light border-primary border">
+										<h6 class="card-header">Does the team have accountability for the product throughout its life-cycle (introduction, growth, maturity, decline)?</h6>
+										<div class="card-body pt-1 pb-1 bg-gradient-secondary">
+									<div class="custom-control custom-radio my-2">
+			<input type="radio" class="custom-control-input" id="S7-Q4-A1" value="S7-Q4-A1" name="S7-Q4" >
+			<label class="custom-control-label" for="S7-Q4-A1">Yes</label>
+			</div>
+					<div class="custom-control custom-radio my-2">
+			<input type="radio" class="custom-control-input" id="S7-Q4-A2" value="S7-Q4-A2" name="S7-Q4" >
+			<label class="custom-control-label" for="S7-Q4-A2">No</label>
+			</div>
+				
+					</div>
+				</div>
+				
+		
+				
+				<div class="card mt-4  ml-sm-2 ml-xs-0 mr-sm-2 mr-xs-0 text-dark text-left bg-light border-primary border">
+										<h6 class="card-header">Does the team have a culture of experimentation and innovation?</h6>
+										<div class="card-body pt-1 pb-1 bg-gradient-secondary">
+									<div class="custom-control custom-radio my-2">
+			<input type="radio" class="custom-control-input" id="S7-Q5-A1" value="S7-Q5-A1" name="S7-Q5" >
+			<label class="custom-control-label" for="S7-Q5-A1">Yes</label>
+			</div>
+					<div class="custom-control custom-radio my-2">
+			<input type="radio" class="custom-control-input" id="S7-Q5-A2" value="S7-Q5-A2" name="S7-Q5" >
+			<label class="custom-control-label" for="S7-Q5-A2">No</label>
+			</div>
+				
+					</div>
+				</div>
+				
+		
+				
+				<div class="card mt-4  ml-sm-2 ml-xs-0 mr-sm-2 mr-xs-0 text-dark text-left bg-light border-primary border">
+										<h6 class="card-header">Does the team have a high trust culture which enables autonomy?</h6>
+										<div class="card-body pt-1 pb-1 bg-gradient-secondary">
+									<div class="custom-control custom-radio my-2">
+			<input type="radio" class="custom-control-input" id="S7-Q6-A1" value="S7-Q6-A1" name="S7-Q6" >
+			<label class="custom-control-label" for="S7-Q6-A1">Yes</label>
+			</div>
+					<div class="custom-control custom-radio my-2">
+			<input type="radio" class="custom-control-input" id="S7-Q6-A2" value="S7-Q6-A2" name="S7-Q6" >
+			<label class="custom-control-label" for="S7-Q6-A2">No</label>
+			</div>
+				
+					</div>
+				</div>
+				
+		
+				
+				<div class="card mt-4  ml-sm-2 ml-xs-0 mr-sm-2 mr-xs-0 text-dark text-left bg-light border-primary border">
+										<h6 class="card-header">Do people involved in developing and running the application have aligned incentives and goals?</h6>
+										<div class="card-body pt-1 pb-1 bg-gradient-secondary">
+									<div class="custom-control custom-radio my-2">
+			<input type="radio" class="custom-control-input" id="S7-Q7-A1" value="S7-Q7-A1" name="S7-Q7" >
+			<label class="custom-control-label" for="S7-Q7-A1">Yes</label>
+			</div>
+					<div class="custom-control custom-radio my-2">
+			<input type="radio" class="custom-control-input" id="S7-Q7-A2" value="S7-Q7-A2" name="S7-Q7" >
+			<label class="custom-control-label" for="S7-Q7-A2">No</label>
+			</div>
+				
+					</div>
+				</div>
+				
+		
+				
+				<div class="card mt-4  ml-sm-2 ml-xs-0 mr-sm-2 mr-xs-0 text-dark text-left bg-light border-primary border">
+										<h6 class="card-header">Does the team have a say in what they work on (e.g. self selection days)?</h6>
+										<div class="card-body pt-1 pb-1 bg-gradient-secondary">
+									<div class="custom-control custom-radio my-2">
+			<input type="radio" class="custom-control-input" id="S7-Q8-A1" value="S7-Q8-A1" name="S7-Q8" >
+			<label class="custom-control-label" for="S7-Q8-A1">Yes</label>
+			</div>
+					<div class="custom-control custom-radio my-2">
+			<input type="radio" class="custom-control-input" id="S7-Q8-A2" value="S7-Q8-A2" name="S7-Q8" >
+			<label class="custom-control-label" for="S7-Q8-A2">No</label>
+			</div>
+				
+					</div>
+				</div>
+				
+		
+				
+				<div class="card mt-4  ml-sm-2 ml-xs-0 mr-sm-2 mr-xs-0 text-dark text-left bg-light border-primary border">
+										<h6 class="card-header">Does the organisation's structure catalyse and support a DevOps approach?</h6>
+										<div class="card-body pt-1 pb-1 bg-gradient-secondary">
+									<div class="custom-control custom-radio my-2">
+			<input type="radio" class="custom-control-input" id="S7-Q9-A1" value="S7-Q9-A1" name="S7-Q9" >
+			<label class="custom-control-label" for="S7-Q9-A1">Yes</label>
+			</div>
+					<div class="custom-control custom-radio my-2">
+			<input type="radio" class="custom-control-input" id="S7-Q9-A2" value="S7-Q9-A2" name="S7-Q9" >
+			<label class="custom-control-label" for="S7-Q9-A2">No</label>
+			</div>
+				
+					</div>
+				</div>
+				
+		
+				
+				<div class="card mt-4  ml-sm-2 ml-xs-0 mr-sm-2 mr-xs-0 text-dark text-left bg-light border-primary border">
+										<h6 class="card-header">Is there a team charter that describes how the team behaves and works together?</h6>
+										<div class="card-body pt-1 pb-1 bg-gradient-secondary">
+									<div class="custom-control custom-radio my-2">
+			<input type="radio" class="custom-control-input" id="S7-Q10-A1" value="S7-Q10-A1" name="S7-Q10" >
+			<label class="custom-control-label" for="S7-Q10-A1">Yes</label>
+			</div>
+					<div class="custom-control custom-radio my-2">
+			<input type="radio" class="custom-control-input" id="S7-Q10-A2" value="S7-Q10-A2" name="S7-Q10" >
+			<label class="custom-control-label" for="S7-Q10-A2">No</label>
+			</div>
+				
+					</div>
+				</div>
+				
+		
+				
+				<div class="card mt-4  ml-sm-2 ml-xs-0 mr-sm-2 mr-xs-0 text-dark text-left bg-light border-primary border">
+										<h6 class="card-header">Is there a clear vision and purpose for the product?</h6>
+										<div class="card-body pt-1 pb-1 bg-gradient-secondary">
+									<div class="custom-control custom-radio my-2">
+			<input type="radio" class="custom-control-input" id="S7-Q11-A1" value="S7-Q11-A1" name="S7-Q11" >
+			<label class="custom-control-label" for="S7-Q11-A1">Yes</label>
+			</div>
+					<div class="custom-control custom-radio my-2">
+			<input type="radio" class="custom-control-input" id="S7-Q11-A2" value="S7-Q11-A2" name="S7-Q11" >
+			<label class="custom-control-label" for="S7-Q11-A2">No</label>
+			</div>
+				
+					</div>
+				</div>
+				
+		
+				
+				<div class="card mt-4  ml-sm-2 ml-xs-0 mr-sm-2 mr-xs-0 text-dark text-left bg-light border-primary border">
+										<h6 class="card-header">Are all the product's stakeholders identified and engaged?</h6>
+										<div class="card-body pt-1 pb-1 bg-gradient-secondary">
+									<div class="custom-control custom-radio my-2">
+			<input type="radio" class="custom-control-input" id="S7-Q12-A1" value="S7-Q12-A1" name="S7-Q12" >
+			<label class="custom-control-label" for="S7-Q12-A1">Yes</label>
+			</div>
+					<div class="custom-control custom-radio my-2">
+			<input type="radio" class="custom-control-input" id="S7-Q12-A2" value="S7-Q12-A2" name="S7-Q12" >
+			<label class="custom-control-label" for="S7-Q12-A2">No</label>
+			</div>
+				
+					</div>
+				</div>
+				
+		
+				
+				<div class="card mt-4  ml-sm-2 ml-xs-0 mr-sm-2 mr-xs-0 text-dark text-left bg-light border-primary border">
+										<h6 class="card-header">Is the team aligned and incentivised to a measurable business outcome?</h6>
+										<div class="card-body pt-1 pb-1 bg-gradient-secondary">
+									<div class="custom-control custom-radio my-2">
+			<input type="radio" class="custom-control-input" id="S7-Q13-A1" value="S7-Q13-A1" name="S7-Q13" >
+			<label class="custom-control-label" for="S7-Q13-A1">Yes</label>
+			</div>
+					<div class="custom-control custom-radio my-2">
+			<input type="radio" class="custom-control-input" id="S7-Q13-A2" value="S7-Q13-A2" name="S7-Q13" >
+			<label class="custom-control-label" for="S7-Q13-A2">No</label>
+			</div>
+				
+					</div>
+				</div>
+				
+		
+				
+				<div class="card mt-4  ml-sm-2 ml-xs-0 mr-sm-2 mr-xs-0 text-dark text-left bg-light border-primary border">
+										<h6 class="card-header">Do management and the wider organisation see the value in protecting time for continuous improvement?</h6>
+										<div class="card-body pt-1 pb-1 bg-gradient-secondary">
+									<div class="custom-control custom-radio my-2">
+			<input type="radio" class="custom-control-input" id="S7-Q14-A1" value="S7-Q14-A1" name="S7-Q14" >
+			<label class="custom-control-label" for="S7-Q14-A1">Yes</label>
+			</div>
+					<div class="custom-control custom-radio my-2">
+			<input type="radio" class="custom-control-input" id="S7-Q14-A2" value="S7-Q14-A2" name="S7-Q14" >
+			<label class="custom-control-label" for="S7-Q14-A2">No</label>
+			</div>
+				
+					</div>
+				</div>
+				
+		
+				
+				<div class="card mt-4  ml-sm-2 ml-xs-0 mr-sm-2 mr-xs-0 text-dark text-left bg-light border-primary border">
+										<h6 class="card-header">Does the team have enough time to learn new technologies, tools and practices?</h6>
+										<div class="card-body pt-1 pb-1 bg-gradient-secondary">
+									<div class="custom-control custom-radio my-2">
+			<input type="radio" class="custom-control-input" id="S7-Q15-A1" value="S7-Q15-A1" name="S7-Q15" >
+			<label class="custom-control-label" for="S7-Q15-A1">Yes</label>
+			</div>
+					<div class="custom-control custom-radio my-2">
+			<input type="radio" class="custom-control-input" id="S7-Q15-A2" value="S7-Q15-A2" name="S7-Q15" >
+			<label class="custom-control-label" for="S7-Q15-A2">No</label>
+			</div>
+				
+					</div>
+				</div>
+				
+		
+				
+				<div class="card mt-4  ml-sm-2 ml-xs-0 mr-sm-2 mr-xs-0 text-dark text-left bg-light border-primary border">
+										<h6 class="card-header">How frequently is there interaction between the business and the development team?</h6>
+										<div class="card-body pt-1 pb-1 bg-gradient-secondary">
+									<div class="custom-control custom-radio my-2">
+			<input type="radio" class="custom-control-input" id="S7-Q16-A1" value="S7-Q16-A1" name="S7-Q16" >
+			<label class="custom-control-label" for="S7-Q16-A1">Business users are embedded within the team</label>
+			</div>
+					<div class="custom-control custom-radio my-2">
+			<input type="radio" class="custom-control-input" id="S7-Q16-A2" value="S7-Q16-A2" name="S7-Q16" >
+			<label class="custom-control-label" for="S7-Q16-A2">The team meets with the business at least every week</label>
+			</div>
+					<div class="custom-control custom-radio my-2">
+			<input type="radio" class="custom-control-input" id="S7-Q16-A3" value="S7-Q16-A3" name="S7-Q16" >
+			<label class="custom-control-label" for="S7-Q16-A3">The team meets with the business at least every month</label>
+			</div>
+					<div class="custom-control custom-radio my-2">
+			<input type="radio" class="custom-control-input" id="S7-Q16-A4" value="S7-Q16-A4" name="S7-Q16" >
+			<label class="custom-control-label" for="S7-Q16-A4">Rarely or not at all</label>
+			</div>
+				
+					</div>
+				</div>
+				
+		
+				
+				<div class="card mt-4  ml-sm-2 ml-xs-0 mr-sm-2 mr-xs-0 text-dark text-left bg-light border-primary border">
+										<h6 class="card-header">Do senior stakeholders buy into and support the DevOps approach?</h6>
+										<div class="card-body pt-1 pb-1 bg-gradient-secondary">
+									<div class="custom-control custom-radio my-2">
+			<input type="radio" class="custom-control-input" id="S7-Q17-A1" value="S7-Q17-A1" name="S7-Q17" >
+			<label class="custom-control-label" for="S7-Q17-A1">Yes, we rarely have issues with business cases or bureaucratic processes</label>
+			</div>
+					<div class="custom-control custom-radio my-2">
+			<input type="radio" class="custom-control-input" id="S7-Q17-A2" value="S7-Q17-A2" name="S7-Q17" >
+			<label class="custom-control-label" for="S7-Q17-A2">Yes, there is buy-in and understanding, but business processes are still too rigid</label>
+			</div>
+					<div class="custom-control custom-radio my-2">
+			<input type="radio" class="custom-control-input" id="S7-Q17-A3" value="S7-Q17-A3" name="S7-Q17" >
+			<label class="custom-control-label" for="S7-Q17-A3">No</label>
+			</div>
+				
+					</div>
+				</div>
+				
+		
+				
+				<div class="card mt-4  ml-sm-2 ml-xs-0 mr-sm-2 mr-xs-0 text-dark text-left bg-light border-primary border">
+										<h6 class="card-header">Do members of the team practice continuous learning?</h6>
+										<div class="card-body pt-1 pb-1 bg-gradient-secondary">
+									<div class="custom-control custom-radio my-2">
+			<input type="radio" class="custom-control-input" id="S7-Q18-A1" value="S7-Q18-A1" name="S7-Q18" >
+			<label class="custom-control-label" for="S7-Q18-A1">Yes</label>
+			</div>
+					<div class="custom-control custom-radio my-2">
+			<input type="radio" class="custom-control-input" id="S7-Q18-A2" value="S7-Q18-A2" name="S7-Q18" >
+			<label class="custom-control-label" for="S7-Q18-A2">No</label>
+			</div>
+				
+					</div>
+				</div>
+				
+		
+				
+				<div class="card mt-4  ml-sm-2 ml-xs-0 mr-sm-2 mr-xs-0 text-dark text-left bg-light border-primary border">
+										<h6 class="card-header">Does the team have a feedback culture (where people are happy to quickly share negative and positive feedback)?</h6>
+										<div class="card-body pt-1 pb-1 bg-gradient-secondary">
+									<div class="custom-control custom-radio my-2">
+			<input type="radio" class="custom-control-input" id="S7-Q19-A1" value="S7-Q19-A1" name="S7-Q19" >
+			<label class="custom-control-label" for="S7-Q19-A1">Yes</label>
+			</div>
+					<div class="custom-control custom-radio my-2">
+			<input type="radio" class="custom-control-input" id="S7-Q19-A2" value="S7-Q19-A2" name="S7-Q19" >
+			<label class="custom-control-label" for="S7-Q19-A2">No</label>
+			</div>
+				
+					</div>
+				</div>
+				
+		
+		
+		</div>
+
+	</div>
+	
+	<div class="row form-group">
+	<div class="text-center col-lg-12">
+		<div class="btn-group btn-group-justified">
+						<div class="btn-group">
+				<button type="submit" class="btn btn-primary" onclick="$('form').attr('action', 'section-devops-practices');">Previous</button>
+			</div>
+									<div class="btn-group" role="group">
+				<button type="submit" class="btn btn-primary" onclick="$('form').attr('action', 'section-standardisation');">Next</button>
+			</div>
+					</div>
+		<!-- Show results button if we are on the final section -->
+			</div>
+	</div>
+	
+	</form>
+	</div>
+	
+	
+		<!-- Popper.js first, then Bootstrap JS -->
+        <script src="https://devopsmaturity.atos.net/js/popper.min.js"></script>
+        <script src="https://devopsmaturity.atos.net/js/bootstrap.min.js"></script>
+		
+    
+  </body>
+</html>
+    	
+
+	
