@@ -1,6 +1,6 @@
 <?php 
 	
-	/* Copyright 2019 Atos SE and Worldline
+	/* Copyright 2021 HighVail Systems Inc.
 	 * Licensed under MIT (https://github.com/highvail/DevOpsMaturityAssessment/blob/master/LICENSE) */
 	
 	// Load the "next steps" advice from json file
