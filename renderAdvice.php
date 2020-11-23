@@ -1,7 +1,7 @@
 <?php 
 	
 	/* Copyright 2019 Atos SE and Worldline
-	 * Licensed under MIT (https://github.com/atosorigin/DevOpsMaturityAssessment/blob/master/LICENSE) */
+	 * Licensed under MIT (https://github.com/highvail/DevOpsMaturityAssessment/blob/master/LICENSE) */
 	
 	// Load the "next steps" advice from json file
 	$json = file_get_contents("advice.json");
@@ -11,17 +11,6 @@
 	function RenderAdvice($sectionName, $includeDetailedReportLink)
 	{
 		global $advice, $survey;
-		
-		// If we are providing advice for a section that has sub categories, then include a link to the detailed report
-		$detailedReportLink = '';
-		if ($includeDetailedReportLink)
-		{
-			if ( $survey->sections[$survey->SectionNameToIndex($sectionName)]['HasSubCategories'] )
-			{
-				$detailedReportLink = '</p><p>See also <a href="results-' . SectionNameToURLName($sectionName) . '">detailed report for ' .
-										$sectionName . '</a>.';
-			}
-		}
 			
 		// If there is "ReadMore" advice included, create a link for this
 		$readMoreLink = '';

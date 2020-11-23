@@ -1,7 +1,7 @@
 <?php
 
-/* Copyright 2018 Atos SE and Worldline
- * Licensed under MIT (https://github.com/atosorigin/DevOpsMaturityAssessment/blob/master/LICENSE)
+/* Copyright 2021 HighVail Systems Inc.
+ * Licensed under MIT (https://github.com/highvail/DevOpsMaturityAssessment/blob/master/LICENSE)
  
  */
 

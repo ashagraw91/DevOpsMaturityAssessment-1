@@ -114,7 +114,7 @@
 				"QuestionText" : "Does the architecture enable development, testing and other QA activities to be representative and performed independently of each another without impacting production (tick all that apply)?",
 				"Answers" : [
 					{"Answer" : "There are fully separate development, test and QA environments", "Score" : 0.5},
-					{"Answer" : "Environments are regularly re-built or synchronised (at least monthly)", "Score" : 0.5},
+					{"Answer" : "Environments are regularly re-built or synchronized (at least monthly)", "Score" : 0.5},
 					{"Answer" : "The 3 environments are similar at all levels (resilience, performance, security, dependencies)", "Score" : 0.5},
 					{"Answer" : "Each environment can be torn down and rebuilt without affecting other environments", "Score" : 0.5},
 					{"Answer" : " Environment specific configuration items are decoupled from the code in order to accelerate rebuilds", "Score" : 0.5}
@@ -156,7 +156,7 @@
 		"Questions" : [
 			{
 				"Type" : "Option",
-				"SubCategory" : "Organisation Structure",
+				"SubCategory" : "Organization Structure",
 				"QuestionText" : "Is the team a cross functional delivery team comprising of development, testing and operations expertise?"
 			},
 			{
@@ -170,22 +170,22 @@
 		]
 	},
 	{
-		"SectionName" : "Standardisation",
+		"SectionName" : "Standardization",
 		"SpiderPos" : 5,
 		"Questions" : [
 			{
 				"Type" : "Checkbox",
-				"QuestionText" : "Has the organisation standardised on a set of tooling standards (tick all that apply)?",
+				"QuestionText" : "Has the organization standardized on a set of tooling standards (tick all that apply)?",
 				"Answers" : [
 					{"Answer" : "We have a defined set of CI/CD tooling that is universally used", "Score" : 1},
-					{"Answer" : "We have defined code repository tooling and standardised usage processes for them (e.g. branching pattern)", "Score" : 1},
+					{"Answer" : "We have defined code repository tooling and standardized usage processes for them (e.g. branching pattern)", "Score" : 1},
 					{"Answer" : "We have defined monitoring tooling", "Score" : 1},
 					{"Answer" : "We have defined patching/upgrade tooling and processes (e.g. immutable vs. mutable)", "Score" : 1}
 					]
 			},
 			{
 				"Type" : "Option",
-				"QuestionText" : "Has the organisation standardised on a set of application stacks/development languages?",
+				"QuestionText" : "Has the organization standardized on a set of application stacks/development languages?",
 				"Answers" : [
 					{"Answer" : "Yes, with a sufficient portfolio of options to meet our development needs", "Score" : 2},
 					{"Answer" : "Yes, but with an insufficient portfolio of options to meet our development needs", "Score" : 1},

@@ -1,5 +1,5 @@
 <?php 
-	/* Copyright 2020 HighVail Systems Inc
+	/* Copyright 2021 HighVail Systems Inc
 	 * Licensed under MIT (https://github.com/highvail/DevOpsMaturityAssessment/blob/master/LICENSE) */
 
 	require 'survey.php'; 

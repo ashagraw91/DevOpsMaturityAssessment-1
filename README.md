@@ -22,7 +22,7 @@ If you would like to adjust colours/branding for your own purpose, please do thi
 * Loading questions, processing responses, and generating summary results is all managed by the Survey class defined in [survey.php](https://github.com/atosorigin/DevOpsMaturityAssessment/blob/master/survey.php)
 * Rendering of the survey is performed by [collectResponses.php](https://github.com/atosorigin/DevOpsMaturityAssessment/blob/master/collectResponses.php)
 * Rendering of the survey results is performed by [viewResults.php](https://github.com/atosorigin/DevOpsMaturityAssessment/blob/master/viewResults.php)
-* Layout uses customised [Bootstrap](http://getbootstrap.com/) 4.1.3
+* Layout uses customized [Bootstrap](http://getbootstrap.com/) 4.1.3
 * Rendering charts uses [Chart.js](https://www.chartjs.org/) 2.7.2
 * Icons from [Font Awesome Free](https://fontawesome.com/free) 5.3.1
 
