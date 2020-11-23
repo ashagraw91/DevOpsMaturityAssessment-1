@@ -1,5 +1,5 @@
 <?php 
-	/* Copyright 2020 HighVail Systems Inc
+	/* Copyright 2021 HighVail Systems Inc
 	 * Licensed under MIT (https://github.com/highvail/DevOpsMaturityAssessment/blob/master/LICENSE) */
 	
 	$isForm = FALSE;
@@ -89,112 +89,6 @@
 					<p align="center"><em>We do not harvest your data and we will not share your results with anyone else.</em></p>
 				</div>
 			</div>
-		  
-			<section class="jumbotron text-center border border-primary bg-dark mt-2">
-				<div class="container">
-					<h1 class="jumbotron-heading">Meet The Team</h1>
-					<p class="lead">You can find out more about HighVail's  core DevOps team below.</p>
-				</div>
-			</section>
-		  
-			<div class="row">
-			
-				<div class="col-lg-12">
-					
-					<div class="card-deck">
-					
-						<div class="card bg-transparent text-center">
-							<div class="text-center">
-								<img class="rounded-circle border border-primary mb-2" src="team-photos/KA.png" alt="Generic placeholder image" width="140" height="140">
-							</div>
-							<div class="card-body pb-0 pt-0">
-								<h6>Krys Armatys</h6>	
-								<p class="small">COO</p>
-							</div>
-							<div class="card-footer text-center pt-0">
-								<?=RenderLinkedInLink('https://www.linkedin.com/in/XXXXXXX/')?>
-								<?=RenderTwitterLink('https://twitter.com/XXXXXXX')?>	
-							</div>
-						</div>
-
-	
-						<div class="card bg-transparent text-center">
-							<div class="text-center">
-								<img class="rounded-circle border border-primary mb-2" src="team-photos/MS.png" alt="Generic placeholder image" width="140" height="140">
-							</div>
-							
-							<div class="card-body  pb-0 pt-0">
-								<h6>Matt Siemens</h6>
-								<p class="small">Hybrid Cloud and Infrastructure</p>
-							</div>
-							<div class="card-footer text-center pt-0">
-								<?=RenderLinkedInLink('https://www.linkedin.com/in/XXXXX/')?>
-							</div>
-						</div>
-
-		
-						<div class="card bg-transparent text-center">
-							<div class="text-center">
-								<img class="rounded-circle border border-primary mb-2" src="team-photos/NR.png" alt="Generic placeholder image" width="140" height="140">
-							</div>
-							<div class="card-body  pb-0 pt-0">
-								<h6>Nenad Rokic</h6>								
-								<p class="small">Director, Platform & DevOps</p>
-							</div>
-							<div class="card-footer text-center pt-0">
-								<?=RenderLinkedInLink('https://www.linkedin.com/in/XXXX')?>
-							</div>
-						</div>
-					
-
-					</div>
-					
-				</div>
-			</div>
-			<div class="row mt-4">
-				
-				<div class="col-lg-2"></div>
-				<div class="col-lg-8">
-					
-					<div class="card-deck">
-					
-						<div class="card bg-transparent text-center">
-							<div class="text-center">
-								<img class="rounded-circle border border-primary mb-2" src="team-photos/AP.png" alt="Generic placeholder image" width="140" height="140">
-							</div>
-							<div class="card-body pb-0 pt-0">
-								<h6>Andy Prowse</h6>	
-								<p class="small">Training, Platform & DevOps</p>
-							</div>
-							<div class="card-footer text-center pt-0">
-								<?=RenderLinkedInLink('https://www.linkedin.com/in/XXXXX')?>
-							</div>
-						</div>
-
-	
-						<div class="card bg-transparent text-center">
-							<div class="text-center">
-								<img class="rounded-circle border border-primary mb-2" src="team-photos/JR.png" alt="Generic placeholder image" width="140" height="140">
-							</div>
-							
-							<div class="card-body  pb-0 pt-0">
-								<h6>James Radmelick</h6>
-								<p class="small">Technical Client Director</p>
-							</div>
-							<div class="card-footer text-center pt-0">
-								<?=RenderLinkedInLink('https://www.linkedin.com/in/XXXXX/')?>
-							</div>
-						</div>
-					
-
-					</div>
-					
-				
-				</div><!-- /.col-lg-12 -->
-				<div class="col-lg-2"></div>
-			</div><!-- /.row -->
-		
-		
 	
 	</div><!-- /.col-lg-8 -->
 	
@@ -210,5 +104,6 @@
 
 	
 <?php 
-	/* Copyright 2020 HighVail Systems Inc
+	/* Copyright 2021 HighVail Systems Inc
 	 * Licensed under MIT (https://github.com/highvail/DevOpsMaturityAssessment/blob/master/LICENSE) */
+?>

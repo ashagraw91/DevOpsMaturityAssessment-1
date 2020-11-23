@@ -1,6 +1,6 @@
 <?php 
-	/* Copyright 2018 Atos SE and Worldline
-	 * Licensed under MIT (https://github.com/atosorigin/DevOpsMaturityAssessment/blob/master/LICENSE) */
+	/* Copyright 2021 HighVail Systems Inc
+	 * Licensed under MIT (https://github.com/highvail/DevOpsMaturityAssessment/blob/master/LICENSE) */
 
 	require 'survey.php'; 
 	
@@ -9,15 +9,7 @@
 	// Create an array to represent the navbar buttons
 	$navBar = array (
 		'Questionaire' => array ('Url' => 'section-' . SectionNameToURLName($survey->sections[0]['SectionName']), 'Type' => 'Standard'),
-		'Sections' => array ('Type' => 'Dropdown' ),
-				// Sub-menus for each page are added here (see below)
-		'Results' => array ('Url' => 'results', 'Type' => 'Standard' ),
-		'Detailed Reports' => array ('Type' => 'Dropdown', 'Items' => array (
-				'Download CSV' => array('Url' => 'devops-maturity-csv.php', 'Type' => 'Standard'),
-				'Divider1' => array('Type' =>'Divider') ) ),
-				// Sub-menus for detailed reports are added here, see below
-		'Resources' => array ('Url' => 'resources', 'Type' => 'Standard' ),
-		'About' => array ('Url' => 'about', 'Type' => 'Standard' ) );
+		'Sections' => array ('Type' => 'Dropdown' ));
 	
 	// Add the sub-menus for each page of the survey, and also for the detailed reports
 	foreach ($survey->sections as $section)
